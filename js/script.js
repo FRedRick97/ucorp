@@ -2,9 +2,9 @@ $(function () {
     $(window).scroll(function () {
         if ($(window).width() > 769) {
             if ($(document).scrollTop() > 100) {
-                $('.navbar').css("padding", "10px").css("background-color", "rgb(60,60,60)");
+                $('.navbar').css("padding", "10px");
             } else {
-                $('.navbar').css("padding", "20px").css("background-color", "rgba(60,60,60,0.9)");
+                $('.navbar').css("padding", "20px");
             }
         }
 
