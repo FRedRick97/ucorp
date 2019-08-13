@@ -96,23 +96,32 @@ a.navbar-brand {
     color: white;
  }
 
+.logo-small {
+    height: 100px;
+    max-width: 100%;
+    overflow: hidden;
+    vertical-align: bottom;
+
+ }
+
  .white-color {
-    color: white;
+    color: black;
  }
 
 .navbar {
     width: 100%;
+    height: 100px;
     margin: 0;
-    padding: 20px;
-    background-color: rgba(60,60,60,0.9);
+    /* background-color: rgba(60,60,60,0.9); */
+    background-color: white;
     transition: padding 0.4s;
+    padding: 0;
 }
 
 .nav-link {
     font-family: Helvetica, sans-serif;
     font-size: 15px;
     position: relative;
-    color: white;
 }
 
 
@@ -125,7 +134,7 @@ ul.navbar-nav li a {
     letter-spacing: 2px;
     text-align: center;
 
-    color: white;
+    /* color: white; */
     transition: background-color .2s;
 }
 
@@ -133,6 +142,14 @@ ul.navbar-nav li a:hover {
     background-color: #79d6f2;
 }
 
+#head {
+    font-family: BankGothic-Lt;
+    font-size: 2em;
+}
+
+#tagline {
+    display: block;
+}
 
 h1.head{
     margin: 0;
@@ -185,7 +202,6 @@ p.tagline {
     text-align: center;
     animation: moveLeft 1s ease-out .75s;
     animation-fill-mode: backwards;
-
 }
 
 @keyframes moveLeft {
@@ -204,6 +220,10 @@ p.tagline {
 
 .custom-toggler.navbar-toggler {
     border-color: rgb(255,255,255);
+}
+
+.navbar-toggler {
+    background-color: black;
 }
 
 button:hover {
