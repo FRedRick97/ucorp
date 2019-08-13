@@ -89,6 +89,10 @@ html, body {
     position: relative;
 }
 
+.navbar-nav {
+    background-color: white;
+}
+
 a.navbar-brand {
     letter-spacing: 2px;
     font-family: BankGothic-Lt;
