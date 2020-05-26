@@ -1,0 +1,80 @@
+/* for navbar */
+@media only screen and (max-width: 1024px) {
+    header {
+        transition: all .4s;
+    }
+
+    nav {
+        display: none !important;
+        width: 100%;
+        height: 70%;
+    }
+
+    .navDisplay {
+        display: block !important;
+    }
+
+    .headerHeight {
+        height: 50%;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+    }
+
+    .navItem {
+        width: 100%;
+    }
+
+    .navLink {
+        display: block;
+    }
+
+    .header-logo {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .adjustHeight {
+        height: 30%;
+    }
+
+    .header-logo img {
+        max-width: 30%;
+        height: 100%;
+    }
+
+    .responsiveButton {
+        margin-left: auto;
+        padding: 20px;
+        font-size: 2em;
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .header-logo {
+        width: 20%;
+    }
+    nav {
+        width: 79%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .header-logo img{
+        max-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .header-logo img{
+        max-width: 50%;
+    }
+}

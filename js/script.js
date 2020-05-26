@@ -1,50 +1,11 @@
 $(function () {
-    $(window).scroll(function () {
-        if ($(window).width() > 769) {
-            if ($(document).scrollTop() > 100) {
-                $('.navbar').css("padding", "10px");
-            } else {
-                $('.navbar').css("padding", "20px");
-            }
-        }
-
+    var button = $('.responsiveButton');
+    button.on('click', function () {
+        console.log('I was clicked');
+        $('nav').toggleClass('navDisplay');
+        $('.header-logo').toggleClass('adjustHeight');
+        $('header').toggleClass('headerHeight');
     });
-
-    var scrollLink = $('.scroll');
-    scrollLink.on('click', function (event) {
-        if (this.hash !== "") {
-            // event.preventDefault();
-            $('body, html').stop().animate({
-                scrollTop: $(this.hash).offset().top - $('nav').height()
-            }, 1000);
-        }
-    });
-
-    var topscroll = $('.top-scroll');
-    topscroll.on('click', function (event) {
-        // event.preventDefault();
-        $('body, html').stop().animate({
-            scrollTop: 0
-        }, 1000);
-
-    });
-
-    // var currentSlide = 1;
-    var $slider = $('.slides');
-    var slideCount = $slider.children().length;
-    var animationSpeed = 1000;
-    var pause = 2000;
-    // setInterval(function () {
-    //     $slider.animate({
-    //         marginLeft: '-=900px'
-    //     }, animationSpeed, function () {
-    //         currentSlide++;
-    //         if (currentSlide === slideCount) {
-    //             currentSlide = 1;
-    //             $(this).css('margin-left', 0);
-    //         }
-    //     });
-    // }, pause);
 
 
 });
