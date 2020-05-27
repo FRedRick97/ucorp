@@ -28,8 +28,6 @@
     src: url("../fonts/BankGothic-Md-BT-Medium.ttf");
 }
 
-
-
 * {
     padding: 0;
     margin: 0;
@@ -50,7 +48,7 @@ header {
 
 nav {
     height: 100%;
-    display: inline-block !important;
+    display: inline-block;
     width: 74%;
     vertical-align: top;
 }
@@ -61,11 +59,11 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em;
-    letter-spacing: 2px;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
-header ul li {
+.navItem {
     display: inline-block;
     position: relative;
     text-align: center;
@@ -114,4 +112,71 @@ img {
 
 .responsiveButton {
     display: none;
+    height: 30%;
 }
+
+.topic {
+    text-align: center;
+    background-color: #0094DE;
+    color: white;
+}
+
+.content {
+    padding: 20px 50px;
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.overlay-header {
+    display: flex;
+    height: 7%;
+}
+
+.logoText {
+    font-family: "BankGothic-Md";
+    font-size: 1.3em;
+    color: white;
+}
+
+.text {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.exit {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.overlay-exit {
+    background-color: white;
+    -webkit-mask: url('../icons/times-lt.svg') no-repeat center;
+    mask: url('../icons/times-lt.svg') no-repeat center;
+    height: 100%;
+    width: 50%;
+    transition: all .2s;
+}
+
+.overlay-exit:hover {
+    background-color: black;
+}
+

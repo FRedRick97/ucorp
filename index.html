@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/query.css">
     <link rel="icon" type="image/png" href="images/favi.png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
@@ -15,11 +16,24 @@
 
 <body>
     <header>
-        <div class="header-logo">
-            <img src="images/logo-small.png" alt="logo">
-            <div class="responsiveButton">
-                <label for="toggle">&#9776;</label>
+        <div id="overlay">
+            <div class="overlay-header">
+                <div class="text">
+                    <div>
+                        <h1 class="logoText">Unique corporation</h1>
+                    </div>
+                </div>
+                <div class="exit">
+                    <div class="overlay-exit"></div>
+                </div>
             </div>
+        </div>
+        <div class="header-logo">
+            <img src="images/logo-small.png" class="logoTag" alt="logo">
+            <img src="images/logo-notag.png" class="logoNoTag" alt="logo">
+        </div>
+        <div class="responsiveButton">
+            <img src="icons/bars-lt.svg" alt="bars">
         </div>
         <nav>
             <ul>
@@ -40,7 +54,9 @@
                 </li>
             </ul>
         </nav>
-
-
     </header>
+    <h1 class="topic">About us</h1>
+    <div class="content">
+
+    </div>
 </body>
