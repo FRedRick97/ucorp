@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "Fira Code";
+    src: url("../fonts/FiraCode-Medium.ttf");
+}
+
+@font-face {
     font-family: "siffon basic";
     src: url("../fonts/siffon_basic.otf");
 }
@@ -37,13 +42,14 @@
 html, body {
     height: 100%;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
     height: 15%;
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 400;
-    border-bottom: 2px solid #0094DE;
+    border-bottom: 2px solid #292e49;
 }
 
 nav {
@@ -71,11 +77,33 @@ ul {
     margin-right: 1%;
 }
 
-.navLink, .navLink:hover {
+.navLink,.navLink:hover {
+    cursor: pointer;
     text-decoration: none;
-    overflow: hidden;
+    color: #292e49;
 }
 
+.navLink::before {
+    content: "";
+    position: absolute;
+    background-color: #292e49;
+    bottom: 15%;
+    left: 5%;
+    height: 10%;
+    width: 0;
+    transition: all .3s;
+}
+
+.navLink:hover::before {
+    width: 90%;
+}
+
+.highlight {
+    /* background-color: black; */
+    background: linear-gradient(to right, #536976, #292e49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+/*
 .navLink::after {
     content: "";
     background: #0094DE;
@@ -92,7 +120,7 @@ ul {
 	width: 100%;
     height: 100%;
     opacity:0.5;
-}
+} */
 
 .navLink:hover {
     color: black;
@@ -117,15 +145,24 @@ img {
 
 .topic {
     text-align: center;
-    background-color: #0094DE;
-    color: white;
+    text-decoration: underline;
+    background: linear-gradient(to right, #485563, #29323c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* background-color: #0094DE; */
+    /* color: white; */
+}
+
+.heading {
+    margin: 2% 0;
 }
 
 .content {
     padding: 20px 50px;
-    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    height: inherit;
     text-align: justify;
-    font-size: 1.2em;
 }
 
 #overlay {
@@ -180,3 +217,32 @@ img {
     background-color: black;
 }
 
+.block {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.right-float {
+    height: 40%;
+    width: 40%;
+    float: right;
+    clear: left;
+    margin-left: 2%;
+}
+
+.first-block::before {
+    content: " ";
+    height: 50px;
+    width: 0;
+    float: left;
+}
+
+.leftSide {
+    flex: 0 0 49%;
+}
+
+.rightSide {
+    flex: 0 0 49%;
+    height: 60%;
+}
