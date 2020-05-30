@@ -49,7 +49,6 @@ header {
     height: 15%;
     font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 400;
-    /* border-bottom: 2px solid #292e49; */
     -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
@@ -131,7 +130,7 @@ img {
     text-decoration: underline;
     background: linear-gradient(to right, #485563, #29323c);
     -webkit-background-clip: text;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .heading {
@@ -198,10 +197,8 @@ img {
     background-color: black;
 }
 
-.block {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
+.block:not(:first-child) {
+    margin-top: 5%;
 }
 
 .right-float {
@@ -212,7 +209,7 @@ img {
     margin-left: 2%;
 }
 
-.first-block::before {
+.first-block-index::before {
     content: '';
     height: 50px;
     width: 0;
@@ -226,4 +223,144 @@ img {
 .rightSide {
     flex: 0 0 49%;
     height: 60%;
+}
+
+.second-block-index {
+    border: 1px solid red;
+    height: 50%;
+}
+
+.small-heading {
+}
+
+.small-topic {
+    font-size: 2em;
+    text-align: center;
+}
+
+.values-block {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 32%;
+}
+
+.service-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    height: 200%;
+    padding: 2% 0;
+}
+
+.service-item {
+    flex: 0 27%;
+    background-color: #fff;
+    height: 30%;
+    margin-bottom: 2%;
+}
+
+.service-container {
+    padding: 10%;
+    height: 100%;
+    position: relative;
+}
+
+.service-container::before {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    width: 95%;
+    height: 0%;
+    background-color: #0094dc;
+    transition: all .4s;
+}
+
+.service-item:hover {
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.21);
+}
+
+.service-item:hover .service-container::before {
+    height: 90%;
+}
+
+.service-item:hover .service-icon {
+    background-color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-item:hover .service-info {
+    color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-item:hover .service-heading {
+    color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-icon  {
+    height: 30%;
+    width: 30%;
+    display: block;
+    margin-left: 35%;
+    background-color: #0094dc;
+}
+
+#lan {
+    -webkit-mask: url('../icons/network-wired.svg') no-repeat center;
+    mask: url('../icons/network-wired.svg') no-repeat center;
+}
+
+#security {
+    -webkit-mask: url('../icons/shield-alt.svg') no-repeat center;
+    mask: url('../icons/shield-alt.svg') no-repeat center;
+}
+
+#vc {
+    -webkit-mask: url('../icons/video-plus.svg') no-repeat center;
+    mask: url('../icons/video-plus.svg') no-repeat center;
+}
+
+#storage {
+    -webkit-mask: url('../icons/memory.svg') no-repeat center;
+    mask: url('../icons/memory.svg') no-repeat center;
+}
+
+#cctv {
+    -webkit-mask: url('../icons/cctv.svg') no-repeat center;
+    mask: url('../icons/cctv.svg') no-repeat center;
+}
+
+#amc {
+    -webkit-mask: url('../icons/toolbox.svg') no-repeat center;
+    mask: url('../icons/toolbox.svg') no-repeat center;
+}
+
+#revamp {
+    -webkit-mask: url('../icons/ruler-combined.svg') no-repeat center;
+    mask: url('../icons/ruler-combined.svg') no-repeat center;
+}
+
+.service-heading {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #485563;
+}
+
+.service-info {
+    text-align: initial;
+    letter-spacing: 1px;
+    color: #485563;
+    text-align: center;
+}
+
+.service-heading, .service-info {
+    z-index: 20;
+    position: relative;
 }
