@@ -14,7 +14,7 @@ $(function () {
         // $('#overlay').css({ "animation": "demo .5s ease-in-out" });
         // $('#overlay').css({ "display": "none" });
 
-        $('#overlay').animate({ top: '-100%' }, 500, function () {
+        $('#overlay').animate({ top: '-100vh' }, 500, function () {
             $('#overlay').css({ "display": "none" });
         });
 
