@@ -1,0 +1,470 @@
+@font-face {
+    font-family: "Brandon";
+    src: url("../fonts/Brandon_light_it.otf");
+}
+
+@font-face {
+    font-family: "operatorMono-light";
+    src: url("../fonts/OperatorMono-LightItalic.otf");
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("../fonts/FiraCode-Medium.ttf");
+}
+
+@font-face {
+    font-family: "siffon basic";
+    src: url("../fonts/siffon_basic.otf");
+}
+
+@font-face {
+    font-family: "operatorMono-BoldItalic";
+    src: url("../fonts/OperatorMono-BoldItalic.otf");
+}
+
+@font-face {
+    font-family: "BankGothic-Lt";
+    src: url("../fonts/BankGothic-Lt-BT-Light.ttf");
+}
+
+@font-face {
+    font-family: "BankGothic-Md";
+    src: url("../fonts/BankGothic-Md-BT-Medium.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 15%;
+    position: relative;
+    font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+nav {
+    height: 100%;
+    display: inline-block;
+    width: 74%;
+    position: absolute;
+    vertical-align: top;
+}
+
+ul {
+    height: inherit;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.navItem {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 5px 10px;
+    margin-right: 1%;
+}
+
+.navLink,.navLink:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #292e49;
+}
+
+.navLink::before {
+    content: "";
+    position: absolute;
+    background-color: #292e49;
+    bottom: 15%;
+    left: 5%;
+    height: 10%;
+    width: 0;
+    transition: all .3s;
+}
+
+.navLink:hover::before {
+    width: 90%;
+}
+
+.highlight {
+    background: linear-gradient(to right, #536976, #292e49);
+    color: white;
+}
+.navLink:hover {
+    color: black;
+}
+
+.header-logo {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.responsiveButton {
+    display: none;
+}
+
+.responsiveButton img {
+    height: 5vh;
+}
+
+.topic {
+    text-align: center;
+    text-decoration: underline;
+    background: linear-gradient(to right, #485563, #29323c);
+    -webkit-background-clip: text;
+    font-size: 2.5em;
+}
+
+.heading {
+    margin: 2% 0;
+    position: relative;
+}
+
+.content {
+    padding: 20px 50px;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.service-content {
+    position: absolute;
+    min-height: 80%;
+    width: 100%;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.overlay-header {
+    display: flex;
+    height: 7vh;
+}
+
+.logoText {
+    font-family: "BankGothic-Md";
+    font-size: 1.3em;
+    color: white;
+}
+
+.text {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.exit {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.overlay-exit {
+    background-color: white;
+    -webkit-mask: url('../icons/times-lt.svg') no-repeat center;
+    mask: url('../icons/times-lt.svg') no-repeat center;
+    height: 100%;
+    width: 50%;
+    transition: all .2s;
+}
+
+.overlay-exit:hover {
+    background-color: black;
+}
+
+.block:not(:first-child) {
+    margin-top: 5%;
+}
+
+.right-float {
+    height: 40%;
+    width: 40%;
+    float: right;
+    clear: left;
+    margin-left: 2%;
+}
+
+.first-block-index::before {
+    content: '';
+    height: 50px;
+    width: 0;
+    float: left;
+}
+
+.leftSide {
+    flex: 0 0 49%;
+}
+
+.rightSide {
+    flex: 0 0 49%;
+    height: 60%;
+}
+
+.small-topic {
+    font-size: 2em;
+    text-align: center;
+}
+
+.values-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    height: 50vh;
+}
+
+.value-item {
+    height: 20vh;
+    flex: 0 32%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.value-icon {
+    flex: 23%;
+    height: 40%;
+    background-color: #0094dc;
+}
+
+.value-info {
+    flex: 75%;
+}
+
+.value-info p {
+    color: #808080;
+}
+
+.value-title {
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 3%;
+}
+
+#leadership {
+    -webkit-mask: url('../icons/users-crown.svg') no-repeat center;
+    mask: url('../icons/users-crown.svg') no-repeat center;
+}
+
+#team {
+    -webkit-mask: url('../icons/people-carry.svg') no-repeat center;
+    mask: url('../icons/people-carry.svg') no-repeat center;
+}
+
+#pa {
+    -webkit-mask: url('../icons/people-arrows.svg') no-repeat center;
+    mask: url('../icons/people-arrows.svg') no-repeat center;
+}
+
+#quality {
+    -webkit-mask: url('../icons/box-check.svg') no-repeat center;
+    mask: url('../icons/box-check.svg') no-repeat center;
+}
+
+#integrity {
+    -webkit-mask: url('../icons/users-cog.svg') no-repeat center;
+    mask: url('../icons/users-cog.svg') no-repeat center;
+}
+
+#innovative {
+    -webkit-mask: url('../icons/user-slash.svg') no-repeat center;
+    mask: url('../icons/user-slash.svg') no-repeat center;
+}
+
+.service-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    padding: 2% 0;
+}
+
+.service-item {
+    flex: 0 27%;
+    background-color: #fff;
+    height: 50vh;
+    margin-bottom: 2%;
+}
+
+.service-container {
+    padding: 10%;
+    height: 100%;
+    position: relative;
+}
+
+.service-container::before {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    width: 95%;
+    height: 0%;
+    background-color: #0094dc;
+    transition: all .4s;
+}
+
+.service-item:hover {
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.21);
+}
+
+.service-item:hover .service-container::before {
+    height: 90%;
+}
+
+.service-item:hover .service-icon {
+    background-color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-item:hover .service-info {
+    color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-item:hover .service-heading {
+    color: #fff;
+    transition: all .4s;
+    transform: translateY(-10px);
+}
+
+.service-icon  {
+    height: 30%;
+    width: 30%;
+    display: block;
+    margin-left: 35%;
+    background-color: #0094dc;
+}
+
+#lan {
+    -webkit-mask: url('../icons/network-wired.svg') no-repeat center;
+    mask: url('../icons/network-wired.svg') no-repeat center;
+}
+
+#security {
+    -webkit-mask: url('../icons/shield-alt.svg') no-repeat center;
+    mask: url('../icons/shield-alt.svg') no-repeat center;
+}
+
+#vc {
+    -webkit-mask: url('../icons/video-plus.svg') no-repeat center;
+    mask: url('../icons/video-plus.svg') no-repeat center;
+}
+
+#storage {
+    -webkit-mask: url('../icons/memory.svg') no-repeat center;
+    mask: url('../icons/memory.svg') no-repeat center;
+}
+
+#cctv {
+    -webkit-mask: url('../icons/cctv.svg') no-repeat center;
+    mask: url('../icons/cctv.svg') no-repeat center;
+}
+
+#amc {
+    -webkit-mask: url('../icons/toolbox.svg') no-repeat center;
+    mask: url('../icons/toolbox.svg') no-repeat center;
+}
+
+#revamp {
+    -webkit-mask: url('../icons/ruler-combined.svg') no-repeat center;
+    mask: url('../icons/ruler-combined.svg') no-repeat center;
+}
+
+#lan {
+    -webkit-mask: url('../icons/location-arrow.svg') no-repeat center;
+    mask: url('../icons/location-arrow.svg') no-repeat center;
+}
+
+.service-heading {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #485563;
+}
+
+.service-info {
+    text-align: initial;
+    letter-spacing: 1px;
+    color: #485563;
+    text-align: center;
+}
+
+.service-heading, .service-info {
+    z-index: 20;
+    position: relative;
+}
+
+.projects-block {
+    padding: 0 5%;
+}
+
+.project-points {
+    display: block;
+    font-size: 1.2em;
+    line-height: 2em;
+    list-style-type: none;
+    position: relative;
+}
+
+.project-points li {
+    margin: .5em;
+}
+
+.project-points li:first-child {
+    counter-reset: index;
+}
+.project-points li:before {
+    content: counter(index, decimal) ' .';
+    counter-increment:index;
+    background-color: #34495E;
+    color: white;
+    position: absolute;
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    left: -2em;
+}
+
+
+.flex-block {
+    display: flex;
+}
+
+.flex-item {
+    flex-grow: 1;
+}
