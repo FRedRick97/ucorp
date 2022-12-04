@@ -463,8 +463,31 @@ img {
 
 .flex-block {
     display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .flex-item {
-    flex-grow: 1;
+    flex: 0 50%;
+}
+
+.flex-icon {
+    background-color:  black;
+    height: 30%;
+}
+
+#contact {
+    -webkit-mask: url('../icons/address-card.svg') no-repeat center;
+    mask: url('../icons/address-card.svg') no-repeat center;
+}
+
+#mail {
+    -webkit-mask: url('../icons/mail-bulk.svg') no-repeat center;
+    mask: url('../icons/mail-bulk.svg') no-repeat center;
+}
+
+.info-text {
+    text-align: center;
 }
